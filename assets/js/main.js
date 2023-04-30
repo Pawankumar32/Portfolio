@@ -41,7 +41,7 @@ window.addEventListener('scroll', blurHeader)
 
 /*=============== EMAIL JS ===============*/
 const form = document.getElementById('contact-form');
-const message = document.getElementById('contact-message');
+ message = document.getElementById('contact-message');
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -54,7 +54,7 @@ form.addEventListener('submit', function (event) {
             setTimeout(() => {
                 message.textContent = '';
             }, 5000);
-
+  
             form.reset();
         })
         .catch(function (error) {
@@ -62,6 +62,7 @@ form.addEventListener('submit', function (event) {
             console.error('EmailJS Error:', error);
         });
 });
+
 
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
@@ -128,3 +129,19 @@ sr.reveal(`.home__image`, { origin: 'bottom' })
 sr.reveal(`.about__image,.skills__data`, { origin: 'left' })
 sr.reveal(`.about__data,.skills__content`, { origin: 'right' })
 sr.reveal(`.service__card, .projects__card`, { interval: 100 })
+
+
+/*Dear {{name}},
+
+Thank you for subscribing to our newsletter! We're excited to share our latest updates and insights with you.
+
+To confirm your subscription, please click the link below:
+
+[Confirmation Link]
+
+If you did not request this subscription or do not wish to receive our newsletter, please ignore this message.
+
+Thank you for your interest in [Company Name]!
+
+Best regards,
+The [Company Name] Team */
