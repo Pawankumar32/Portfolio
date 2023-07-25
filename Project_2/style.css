@@ -84,7 +84,7 @@ body {
     margin-inline: 60px;
 }
 
-.restartBtn {
+.buttons {
     border: none;
     background: rgb(38, 38, 180);
     color: #fff;
@@ -99,7 +99,7 @@ body {
     cursor: pointer;
 }
 
-.restartBtn:hover {
+.buttons:hover {
     background: rgba(38, 38, 255);
 }
 
@@ -119,6 +119,41 @@ body {
     height: 30px;
     text-align: center;
     display: none;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: none;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.popup-button {
+    padding: 10px 20px;
+    font-size: 30px;
+    color: #696969;;
+    font-weight: bold;
+    justify-content: space-between;
+    margin-inline: 20px;
+    background-color: #fff;
+    border: 4px solid #a7a5a5;
+    border-radius: 4px;
+    cursor: pointer;
+
 }
 
 @media screen and (max-width:550px) {
@@ -154,7 +189,7 @@ body {
         font-weight: bold;
     }
 
-    .restartBtn {
+    .buttons {
         font-size: 20px;
         font-weight: bold;
 

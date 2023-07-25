@@ -12,6 +12,15 @@
 <body>
     <div class="container">
         <h1>Let's Play Tic-Tac-Toe</h1>
+
+        <div class="popup">
+            <h3>User : Choose your symbol</h3>
+            <div class="popup-buttons">
+                <button class="popup-button" onclick="chooseSymbol('X')">X</button>
+                <button class="popup-button" onclick="chooseSymbol('O')">O</button>
+            </div>
+        </div>
+
         <div class="game-board">
             <div class="cell"></div>
             <div class="cell"></div>
@@ -24,10 +33,15 @@
             <div class="cell"></div>
         </div>
         <div class="game-players">
-            <div class="player player-1">Player 1 : </div>
-            <div class="player player-2">Player 2 : </div>
+            <div class="player player-1">User : </div>
+            <div class="player player-2">Computer : </div>
         </div>
-        <button class="restartBtn">Restart</button>
+        <button class="buttons restartBtn">Restart</button>
+        <!-- Add two buttons for symbol selection and game start
+        <button class="buttons chooseXBtn">Player 1: Choose X</button>
+        <button class="buttons chooseOBtn">Player 1: Choose O</button>
+        <button class="buttons startGameBtn" disabled>Start Game</button> -->
+
 
         <div class="alertBox">Alert</div>
     </div>
