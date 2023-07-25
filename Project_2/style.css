@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body {
+    background: rgba(222, 117, 61, 0.972);
+    color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    margin: 40px 0 20px 0;
+    font-weight: bold;
+    font-size: 3rem;
+
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(7rem, 1fr));
+}
+
+.cell {
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 5rem;
+    height: 7rem;
+    width: 7rem;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+/* .cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: none;
+} */
+
+/* Short hand of above commented code */
+/* Put the value of n from 0 to 3 */
+.cell:nth-child(3n) {
+    border-right: none;
+}
+
+.cell:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.game-players {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.player {
+    margin-inline: 60px;
+}
+
+.restartBtn {
+    border: none;
+    background: rgb(38, 38, 180);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+
+    /* margin-block provide margin from top & bottom */
+    margin-block: 15px;
+
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.restartBtn:hover {
+    background: rgba(38, 38, 255);
+}
+
+.cell.disabled {
+    background: rgba(229, 148, 105, 0.972);
+}
+
+.alertBox {
+    position: absolute;
+    top: 0;
+    background-color: rgb(255, 255, 61);
+    color: rgb(182, 182, 2);
+    width: 100%;
+    padding: 5px 12px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    text-align: center;
+    display: none;
+}
+
+@media screen and (max-width:550px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container h1 {
+        font-size: 1.50rem;
+    }
+
+    .game-board {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(5rem, 1fr));
+    }
+
+    .cell {
+        border: 2px solid white;
+        padding: 10px;
+        font-size: 3rem;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .player {
+        margin-block: 20px;
+    }
+
+    .game-players {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .restartBtn {
+        font-size: 20px;
+        font-weight: bold;
+
+        /* margin-block provide margin from top & bottom */
+        margin-block: 15px;
+
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+}
